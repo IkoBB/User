@@ -36,7 +36,7 @@ class Field extends cache_int implements iField
 	{
 		if (Handler::event("iko.user.profile.fields.create", NULL, User::get_session()->get_id(), FALSE)) {
 			$user = User::get_session();
-
+			$sql = "INSERT INTO " . self::table;
 		}
 
 		return FALSE;
